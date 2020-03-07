@@ -1,0 +1,11 @@
+E:\Learning\semester_4\stima\Plague-Inc\Tubes_2\Tubes_2\bin\Debug\netcoreapp3.1\Tubes_2.exe
+E:\Learning\semester_4\stima\Plague-Inc\Tubes_2\Tubes_2\bin\Debug\netcoreapp3.1\Tubes_2.deps.json
+E:\Learning\semester_4\stima\Plague-Inc\Tubes_2\Tubes_2\bin\Debug\netcoreapp3.1\Tubes_2.runtimeconfig.json
+E:\Learning\semester_4\stima\Plague-Inc\Tubes_2\Tubes_2\bin\Debug\netcoreapp3.1\Tubes_2.runtimeconfig.dev.json
+E:\Learning\semester_4\stima\Plague-Inc\Tubes_2\Tubes_2\bin\Debug\netcoreapp3.1\Tubes_2.dll
+E:\Learning\semester_4\stima\Plague-Inc\Tubes_2\Tubes_2\bin\Debug\netcoreapp3.1\Tubes_2.pdb
+E:\Learning\semester_4\stima\Plague-Inc\Tubes_2\Tubes_2\obj\Debug\netcoreapp3.1\Tubes_2.csprojAssemblyReference.cache
+E:\Learning\semester_4\stima\Plague-Inc\Tubes_2\Tubes_2\obj\Debug\netcoreapp3.1\Tubes_2.AssemblyInfoInputs.cache
+E:\Learning\semester_4\stima\Plague-Inc\Tubes_2\Tubes_2\obj\Debug\netcoreapp3.1\Tubes_2.AssemblyInfo.cs
+E:\Learning\semester_4\stima\Plague-Inc\Tubes_2\Tubes_2\obj\Debug\netcoreapp3.1\Tubes_2.dll
+E:\Learning\semester_4\stima\Plague-Inc\Tubes_2\Tubes_2\obj\Debug\netcoreapp3.1\Tubes_2.pdb
