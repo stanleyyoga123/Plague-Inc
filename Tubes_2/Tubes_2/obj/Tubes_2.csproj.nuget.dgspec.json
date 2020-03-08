@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Learning\\semester_4\\stima\\Plague-Inc\\Tubes_2\\Tubes_2\\Tubes_2.csproj": {}
+    "D:\\TubesStima2\\Plague-Inc\\Tubes_2\\Tubes_2\\Tubes_2.csproj": {}
   },
   "projects": {
-    "E:\\Learning\\semester_4\\stima\\Plague-Inc\\Tubes_2\\Tubes_2\\Tubes_2.csproj": {
+    "D:\\TubesStima2\\Plague-Inc\\Tubes_2\\Tubes_2\\Tubes_2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Learning\\semester_4\\stima\\Plague-Inc\\Tubes_2\\Tubes_2\\Tubes_2.csproj",
+        "projectUniqueName": "D:\\TubesStima2\\Plague-Inc\\Tubes_2\\Tubes_2\\Tubes_2.csproj",
         "projectName": "Tubes_2",
-        "projectPath": "E:\\Learning\\semester_4\\stima\\Plague-Inc\\Tubes_2\\Tubes_2\\Tubes_2.csproj",
-        "packagesPath": "C:\\Users\\ROG\\.nuget\\packages\\",
-        "outputPath": "E:\\Learning\\semester_4\\stima\\Plague-Inc\\Tubes_2\\Tubes_2\\obj\\",
+        "projectPath": "D:\\TubesStima2\\Plague-Inc\\Tubes_2\\Tubes_2\\Tubes_2.csproj",
+        "packagesPath": "C:\\Users\\cjunh\\.nuget\\packages\\",
+        "outputPath": "D:\\TubesStima2\\Plague-Inc\\Tubes_2\\Tubes_2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ROG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\cjunh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

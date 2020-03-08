@@ -9,3 +9,14 @@ E:\Learning\semester_4\stima\Plague-Inc\Tubes_2\Tubes_2\obj\Debug\netcoreapp3.1\
 E:\Learning\semester_4\stima\Plague-Inc\Tubes_2\Tubes_2\obj\Debug\netcoreapp3.1\Tubes_2.AssemblyInfo.cs
 E:\Learning\semester_4\stima\Plague-Inc\Tubes_2\Tubes_2\obj\Debug\netcoreapp3.1\Tubes_2.dll
 E:\Learning\semester_4\stima\Plague-Inc\Tubes_2\Tubes_2\obj\Debug\netcoreapp3.1\Tubes_2.pdb
+D:\TubesStima2\Plague-Inc\Tubes_2\Tubes_2\bin\Debug\netcoreapp3.1\Tubes_2.exe
+D:\TubesStima2\Plague-Inc\Tubes_2\Tubes_2\bin\Debug\netcoreapp3.1\Tubes_2.deps.json
+D:\TubesStima2\Plague-Inc\Tubes_2\Tubes_2\bin\Debug\netcoreapp3.1\Tubes_2.runtimeconfig.json
+D:\TubesStima2\Plague-Inc\Tubes_2\Tubes_2\bin\Debug\netcoreapp3.1\Tubes_2.runtimeconfig.dev.json
+D:\TubesStima2\Plague-Inc\Tubes_2\Tubes_2\bin\Debug\netcoreapp3.1\Tubes_2.dll
+D:\TubesStima2\Plague-Inc\Tubes_2\Tubes_2\bin\Debug\netcoreapp3.1\Tubes_2.pdb
+D:\TubesStima2\Plague-Inc\Tubes_2\Tubes_2\obj\Debug\netcoreapp3.1\Tubes_2.csprojAssemblyReference.cache
+D:\TubesStima2\Plague-Inc\Tubes_2\Tubes_2\obj\Debug\netcoreapp3.1\Tubes_2.AssemblyInfoInputs.cache
+D:\TubesStima2\Plague-Inc\Tubes_2\Tubes_2\obj\Debug\netcoreapp3.1\Tubes_2.AssemblyInfo.cs
+D:\TubesStima2\Plague-Inc\Tubes_2\Tubes_2\obj\Debug\netcoreapp3.1\Tubes_2.dll
+D:\TubesStima2\Plague-Inc\Tubes_2\Tubes_2\obj\Debug\netcoreapp3.1\Tubes_2.pdb
