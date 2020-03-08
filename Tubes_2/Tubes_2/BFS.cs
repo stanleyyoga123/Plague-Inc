@@ -15,17 +15,14 @@ namespace Tubes_2
 		{
 			Queue<char> q = new Queue<char>();
 			Dictionary<char, int> T = new Dictionary<char, int>();
-			Dictionary<char, int> vis = new Dictionary<char, int>(); 
 			foreach(var item in this.g.graf)
 			{
 				if (item.Key == src)
 				{
 					T.Add(item.Key, 0);
-					vis.Add(item.Key, 1);
 				} else
 				{
 					T.Add(item.Key, 10000);
-					vis.Add(item.Key, 0);
 				}
 			}
 
@@ -38,25 +35,31 @@ namespace Tubes_2
 
 				foreach(var item in this.g.graf[front].getConnection())
 				{
-					if (vis[item.Item1] == 0)
+					
+					int ans = -1;
+					/*Console.WriteLine("Parent: ");
+					Console.WriteLine(front);
+					Console.WriteLine("Child: ");
+					Console.WriteLine(item.Item1);*/
+					for (int i = T[front]; i <= t; i++)
 					{
-						vis[item.Item1] = 1;
-						int ans = -1;
-						for (int i = T[front]; i <= t; i++)
+						double cek = this.Calc(t_, i - T[front]) * item.Item2;
+						/*Console.WriteLine(i);
+						Console.WriteLine(cek);*/
+						if(cek > 1.0)
 						{
-							double cek = this.Calc(t_, i) * item.Item2;
-							if(cek > 1.0)
-							{
-								ans = i;
-								break;
-							}
+							ans = i;
+							break;
 						}
-						if(ans != -1)
-						{
-							T[item.Item1] = Math.Min(T[item.Item1], ans);
-						}
-						q.Enqueue(item.Item1);
 					}
+					if(ans != -1)
+					{
+						if(ans <= T[item.Item1])
+						{
+							T[item.Item1] = ans;
+							q.Enqueue(item.Item1);
+						}
+					}				
 				}
 			}
 
