@@ -5,7 +5,7 @@ namespace Tubes_2
 {
     class Graph
     {
-        Dictionary<char, City> graf;
+        public Dictionary<char, City> graf;
 
         public Graph(char[] node, int[] population)
         {
@@ -17,7 +17,7 @@ namespace Tubes_2
             }
         }
 
-        public void BatchEdge(char[] City1, char[] City2, float[] weight)
+        public void BatchEdge(char[] City1, char[] City2, double[] weight)
         {
             for (int i = 0; i < City1.Length; i++)
             {
@@ -25,7 +25,7 @@ namespace Tubes_2
             }
         }
 
-        public void AddEdge(char City1, char City2, float weight)
+        public void AddEdge(char City1, char City2, double weight)
         {
             if (graf.ContainsKey(City1))
             {
@@ -48,12 +48,12 @@ namespace Tubes_2
             this.graf[city].printConnection();
         }
 
-        public List<char> getConnection(char city)
+        public List<Tuple<char, double>> getConnection(char city)
         {
             return this.graf[city].getConnection();
         }
 
-        public float getWeight(char city1, char city2)
+        public double getWeight(char city1, char city2)
         {
             return this.graf[city1].getWeight(city2);
         }

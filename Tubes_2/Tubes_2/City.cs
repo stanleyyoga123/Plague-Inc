@@ -6,22 +6,27 @@ namespace Tubes_2
 	public class City
 	{
 		int population;
-		List<Tuple<char, float>> connection;
+		List<Tuple<char, double>> connection;
 
 		public City()
 		{
 			this.population = 0;
-			connection = new List<Tuple<char, float>>();
+			connection = new List<Tuple<char, double>>();
 		}
 		public City(int population)
 		{
 			this.population = population;
-			connection = new List<Tuple<char, float>>();
+			connection = new List<Tuple<char, double>>();
 		}
 
-		public void addConnection(char city, float weight)
+		public int getPopulation()
 		{
-			this.connection.Add(new Tuple<char, float>(city, weight));
+			return this.population;
+		}
+
+		public void addConnection(char city, double weight)
+		{
+			this.connection.Add(new Tuple<char, double>(city, weight));
 		}
 
 		public void printConnection()
@@ -44,7 +49,7 @@ namespace Tubes_2
 			Console.WriteLine();
 		}
 
-		public float getWeight(char city)
+		public double getWeight(char city)
 		{
 			foreach (var c in this.connection)
 			{
@@ -56,14 +61,15 @@ namespace Tubes_2
 			return -999;
 		}
 
-		public List<char> getConnection()
+		public List<Tuple<char, double>> getConnection()
 		{
-			List<char> ret = new List<char>();
+			/*List<char> ret = new List<char>();
 			foreach (var c in connection)
 			{
 				ret.Add(c.Item1);
 			}
-			return ret;
+			return ret;*/
+			return this.connection;
 		}
 	}
 

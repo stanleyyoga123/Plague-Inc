@@ -9,7 +9,7 @@ namespace Tubes_2
         char[] city;
         char[] city_parent;
         char[] city_child;
-        float[] tr;
+        double[] tr;
         char first_city;
 
         public int[] getPopulation()
@@ -32,7 +32,7 @@ namespace Tubes_2
             return this.city_child;
         }
 
-        public float[] getTr()
+        public double[] getTr()
         {
             return this.tr;
         }
@@ -48,12 +48,12 @@ namespace Tubes_2
             {
                 int counter = 0;
                 int ln;
-                string temp_float = "";
+                string temp_double = "";
                 bool mark = false;
                 bool stop = false;
                 city_parent = new char[0];
                 city_child = new char[0];
-                tr = new float[0];
+                tr = new double[0];
                 int size = 0;
                 int index = 0;
 
@@ -64,15 +64,15 @@ namespace Tubes_2
                     {
                         if (!mark)
                         {
-                            size = int.Parse(temp_float);
+                            size = int.Parse(temp_double);
                             this.city_parent = new char[size];
                             this.city_child = new char[size];
-                            this.tr = new float[size];
+                            this.tr = new double[size];
                         }
 
                         else
                         {
-                            float insert = float.Parse(temp_float);
+                            double insert = double.Parse(temp_double);
                             this.tr[index] = insert;
                             index++;
                         }
@@ -83,7 +83,7 @@ namespace Tubes_2
                             stop = true;
                         }
 
-                        temp_float = "";
+                        temp_double = "";
                         counter = 1;
                         mark = true;
                     }
@@ -97,7 +97,7 @@ namespace Tubes_2
                         {
                             if (counter == 0)
                             {
-                                temp_float += (char)ln;
+                                temp_double += (char)ln;
                             }
                             else if (counter == 1)
                             {
@@ -109,7 +109,7 @@ namespace Tubes_2
                             }
                             else
                             {
-                                temp_float += (char)ln;
+                                temp_double += (char)ln;
                             }
                         }
                     }
