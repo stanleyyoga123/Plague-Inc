@@ -50,7 +50,7 @@ namespace GUI3
             }
             this.viewer.Graph = graph;
             this.viewer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Controls.Add(viewer);
+            this.panel1.Controls.Add(viewer);
 
         }
 
@@ -87,13 +87,28 @@ namespace GUI3
             }
             this.viewer.Graph = graph;
             this.viewer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Controls.Add(this.viewer);
+            this.panel1.Controls.Add(this.viewer);
 
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
     }
 }
