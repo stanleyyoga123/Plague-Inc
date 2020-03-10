@@ -1,4 +1,4 @@
-8
+20
 AA BB 0.2
 AA CC 0.05
 BB AA 0.5
@@ -7,3 +7,15 @@ CC AA 0.1
 CC BB 0.1
 DD AA 0.5
 DD CC 0.1
+E AA 0.3
+F DD 0.5
+G F 0.25
+H I 0.7
+I J 0.9
+J AA 0.3
+AA E 0.3
+DD F 0.5
+F G 0.25
+I H 0.7
+J I 0.9
+AA J 0.3
