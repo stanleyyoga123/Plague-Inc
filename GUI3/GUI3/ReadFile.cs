@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace Tubes_2
+namespace GUI3
 {
     class ReadFile
     {
@@ -107,11 +107,17 @@ namespace Tubes_2
                             }
                             else if (counter == 1)
                             {
-                                temp_str_parent += (char)ln;
+                                if ((char)ln != '\r')
+                                {
+                                    temp_str_parent += (char)ln;
+                                }
                             }
                             else if (counter == 2)
                             {
-                                temp_str_child += (char)ln;
+                                if ((char)ln != '\r')
+                                {
+                                    temp_str_child += (char)ln;
+                                }
                             }
                             else
                             {
@@ -185,15 +191,18 @@ namespace Tubes_2
                             }
                             else if (counter == 1)
                             {
-                                if((char) ln != '\r')
+                                if ((char)ln != '\r')
                                 {
-                                    temp_str += (char)ln; 
+                                    temp_str += (char)ln;
                                 }
                                 this.first_city = temp_str;
                             }
                             else if (counter == 2)
                             {
-                                temp_str_city += (char)ln;
+                                if ((char)ln != '\r')
+                                {
+                                    temp_str_city += (char)ln;
+                                }
                             }
                             else if (counter == 3)
                             {

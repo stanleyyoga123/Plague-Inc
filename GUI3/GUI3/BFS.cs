@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Tubes_2
+namespace GUI3
 {
 	class BFS
 	{
@@ -11,16 +11,17 @@ namespace Tubes_2
 			this.g = g;
 		}
 
-		public void run(int t, string src)
+		public Dictionary<string, int> run(int t, string src)
 		{
 			Queue<string> q = new Queue<string>();
 			Dictionary<string, int> T = new Dictionary<string, int>();
-			foreach(var item in this.g.graf)
+			foreach (var item in this.g.graf)
 			{
 				if (item.Key == src)
 				{
 					T.Add(item.Key, 0);
-				} else
+				}
+				else
 				{
 					T.Add(item.Key, 10000);
 				}
@@ -28,14 +29,14 @@ namespace Tubes_2
 
 			q.Enqueue(src);
 
-			while(q.Count != 0)
+			while (q.Count != 0)
 			{
 				string front = q.Dequeue();
 				int t_ = this.g.graf[front].getPopulation();
 
-				foreach(var item in this.g.graf[front].getConnection())
+				foreach (var item in this.g.graf[front].getConnection())
 				{
-					
+
 					int ans = -1;
 					/*Console.WriteLine("Parent: ");
 					Console.WriteLine(front);
@@ -46,32 +47,24 @@ namespace Tubes_2
 						double cek = this.Calc(t_, i - T[front]) * item.Item2;
 						/*Console.WriteLine(i);
 						Console.WriteLine(cek);*/
-						if(cek > 1.0)
+						if (cek > 1.0)
 						{
 							ans = i;
 							break;
 						}
 					}
-					if(ans != -1)
+					if (ans != -1)
 					{
-						if(ans <= T[item.Item1])
+						if (ans <= T[item.Item1])
 						{
 							T[item.Item1] = ans;
 							q.Enqueue(item.Item1);
 						}
-					}				
+					}
 				}
 			}
 
-			foreach(var item in T)
-			{
-				if(item.Value >= 0 && item.Value <= t)
-				{
-					Console.WriteLine(item.Key);
-				}
-				//Console.WriteLine(item.Value);
-			}
-
+			return T;
 		}
 
 		private double Calc(int pop, int time)
