@@ -24,11 +24,12 @@ namespace GUI3
         private void button1_Click(object sender, EventArgs e)
         {
             this.viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
+
             //create a graph object 
             this.graph = new Microsoft.Msagl.Drawing.Graph("graph");
+
             //create the graph content 
             //bind the graph to the viewer 
-
             ReadFile Read = new ReadFile();
             string t = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
             string cur_dir = Directory.GetParent(t).Parent.FullName;
@@ -74,7 +75,7 @@ namespace GUI3
             g.BatchEdge(Read.getCityParent(), Read.getCityChild(), Read.getTr());
             BFS c = new BFS(g);
 
-            Dictionary<char, int> h = c.run(Convert.ToInt32(numericUpDown1.Value), 'A');
+            Dictionary<string, int> h = c.run(Convert.ToInt32(numericUpDown1.Value), Read.getFirstCity());
             foreach(var he in h)
             {
                 if(he.Value >= 0 && he.Value <= 20)

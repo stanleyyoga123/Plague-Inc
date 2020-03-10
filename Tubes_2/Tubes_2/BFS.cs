@@ -11,10 +11,10 @@ namespace Tubes_2
 			this.g = g;
 		}
 
-		public void run(int t, char src)
+		public void run(int t, string src)
 		{
-			Queue<char> q = new Queue<char>();
-			Dictionary<char, int> T = new Dictionary<char, int>();
+			Queue<string> q = new Queue<string>();
+			Dictionary<string, int> T = new Dictionary<string, int>();
 			foreach(var item in this.g.graf)
 			{
 				if (item.Key == src)
@@ -30,7 +30,7 @@ namespace Tubes_2
 
 			while(q.Count != 0)
 			{
-				char front = q.Dequeue();
+				string front = q.Dequeue();
 				int t_ = this.g.graf[front].getPopulation();
 
 				foreach(var item in this.g.graf[front].getConnection())

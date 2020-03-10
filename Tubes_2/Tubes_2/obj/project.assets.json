@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\cjunh\\.nuget\\packages\\": {}
+    "C:\\Users\\ROG\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\TubesStima2\\Plague-Inc\\Tubes_2\\Tubes_2\\Tubes_2.csproj",
+      "projectUniqueName": "E:\\Learning\\semester_4\\stima\\Plague-Inc\\Tubes_2\\Tubes_2\\Tubes_2.csproj",
       "projectName": "Tubes_2",
-      "projectPath": "D:\\TubesStima2\\Plague-Inc\\Tubes_2\\Tubes_2\\Tubes_2.csproj",
-      "packagesPath": "C:\\Users\\cjunh\\.nuget\\packages\\",
-      "outputPath": "D:\\TubesStima2\\Plague-Inc\\Tubes_2\\Tubes_2\\obj\\",
+      "projectPath": "E:\\Learning\\semester_4\\stima\\Plague-Inc\\Tubes_2\\Tubes_2\\Tubes_2.csproj",
+      "packagesPath": "C:\\Users\\ROG\\.nuget\\packages\\",
+      "outputPath": "E:\\Learning\\semester_4\\stima\\Plague-Inc\\Tubes_2\\Tubes_2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\cjunh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ROG\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

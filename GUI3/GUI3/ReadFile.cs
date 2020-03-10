@@ -6,28 +6,28 @@ namespace GUI3
     class ReadFile
     {
         int[] population;
-        char[] city;
-        char[] city_parent;
-        char[] city_child;
+        string[] city;
+        string[] city_parent;
+        string[] city_child;
         double[] tr;
-        char first_city;
+        string first_city;
 
         public int[] getPopulation()
         {
             return this.population;
         }
 
-        public char[] getCity()
+        public string[] getCity()
         {
             return this.city;
         }
 
-        public char[] getCityParent()
+        public string[] getCityParent()
         {
             return this.city_parent;
         }
 
-        public char[] getCityChild()
+        public string[] getCityChild()
         {
             return this.city_child;
         }
@@ -37,7 +37,7 @@ namespace GUI3
             return this.tr;
         }
 
-        public char getFirstCity()
+        public string getFirstCity()
         {
             return this.first_city;
         }
@@ -51,11 +51,13 @@ namespace GUI3
                 string temp_double = "";
                 bool mark = false;
                 bool stop = false;
-                city_parent = new char[0];
-                city_child = new char[0];
+                city_parent = new string[0];
+                city_child = new string[0];
                 tr = new double[0];
                 int size = 0;
                 int index = 0;
+                string temp_str_child = "";
+                string temp_str_parent = "";
 
                 while (!stop)
                 {
@@ -65,8 +67,8 @@ namespace GUI3
                         if (!mark)
                         {
                             size = int.Parse(temp_double);
-                            this.city_parent = new char[size];
-                            this.city_child = new char[size];
+                            this.city_parent = new string[size];
+                            this.city_child = new string[size];
                             this.tr = new double[size];
                         }
 
@@ -74,6 +76,8 @@ namespace GUI3
                         {
                             double insert = double.Parse(temp_double);
                             this.tr[index] = insert;
+                            this.city_parent[index] = temp_str_parent;
+                            this.city_child[index] = temp_str_child;
                             index++;
                         }
 
@@ -84,6 +88,8 @@ namespace GUI3
                         }
 
                         temp_double = "";
+                        temp_str_parent = "";
+                        temp_str_child = "";
                         counter = 1;
                         mark = true;
                     }
@@ -101,11 +107,17 @@ namespace GUI3
                             }
                             else if (counter == 1)
                             {
-                                this.city_parent[index] = (char)ln;
+                                if ((char)ln != '\r')
+                                {
+                                    temp_str_parent += (char)ln;
+                                }
                             }
                             else if (counter == 2)
                             {
-                                this.city_child[index] = (char)ln;
+                                if ((char)ln != '\r')
+                                {
+                                    temp_str_child += (char)ln;
+                                }
                             }
                             else
                             {
@@ -125,11 +137,13 @@ namespace GUI3
                 int ln;
                 bool mark = false;
                 string temp_int = "";
+                string temp_str = "";
                 bool stop = false;
-                this.city = new char[0];
+                this.city = new string[0];
                 this.population = new int[0];
                 int index = 0;
                 int size = 0;
+                string temp_str_city = "";
 
                 while (!stop)
                 {
@@ -139,7 +153,7 @@ namespace GUI3
                         if (!mark)
                         {
                             size = int.Parse(temp_int);
-                            this.city = new char[size];
+                            this.city = new string[size];
                             this.population = new int[size];
                         }
 
@@ -147,6 +161,7 @@ namespace GUI3
                         {
                             int insert = int.Parse(temp_int);
                             this.population[index] = insert;
+                            this.city[index] = temp_str_city;
                             index++;
                         }
 
@@ -159,6 +174,8 @@ namespace GUI3
                         temp_int = "";
                         mark = true;
                         counter = 2;
+                        temp_str = "";
+                        temp_str_city = "";
                     }
                     else
                     {
@@ -174,11 +191,18 @@ namespace GUI3
                             }
                             else if (counter == 1)
                             {
-                                this.first_city = (char)ln;
+                                if ((char)ln != '\r')
+                                {
+                                    temp_str += (char)ln;
+                                }
+                                this.first_city = temp_str;
                             }
                             else if (counter == 2)
                             {
-                                this.city[index] = (char)ln;
+                                if ((char)ln != '\r')
+                                {
+                                    temp_str_city += (char)ln;
+                                }
                             }
                             else if (counter == 3)
                             {

@@ -11,10 +11,10 @@ namespace GUI3
 			this.g = g;
 		}
 
-		public Dictionary<char, int> run(int t, char src)
+		public Dictionary<string, int> run(int t, string src)
 		{
-			Queue<char> q = new Queue<char>();
-			Dictionary<char, int> T = new Dictionary<char, int>();
+			Queue<string> q = new Queue<string>();
+			Dictionary<string, int> T = new Dictionary<string, int>();
 			foreach (var item in this.g.graf)
 			{
 				if (item.Key == src)
@@ -31,7 +31,7 @@ namespace GUI3
 
 			while (q.Count != 0)
 			{
-				char front = q.Dequeue();
+				string front = q.Dequeue();
 				int t_ = this.g.graf[front].getPopulation();
 
 				foreach (var item in this.g.graf[front].getConnection())

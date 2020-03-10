@@ -6,17 +6,17 @@ namespace GUI3
 	public class City
 	{
 		int population;
-		List<Tuple<char, double>> connection;
+		List<Tuple<string, double>> connection;
 
 		public City()
 		{
 			this.population = 0;
-			connection = new List<Tuple<char, double>>();
+			connection = new List<Tuple<string, double>>();
 		}
 		public City(int population)
 		{
 			this.population = population;
-			connection = new List<Tuple<char, double>>();
+			connection = new List<Tuple<string, double>>();
 		}
 
 		public int getPopulation()
@@ -24,9 +24,9 @@ namespace GUI3
 			return this.population;
 		}
 
-		public void addConnection(char city, double weight)
+		public void addConnection(string city, double weight)
 		{
-			this.connection.Add(new Tuple<char, double>(city, weight));
+			this.connection.Add(new Tuple<string, double>(city, weight));
 		}
 
 		public void printConnection()
@@ -49,7 +49,7 @@ namespace GUI3
 			Console.WriteLine();
 		}
 
-		public double getWeight(char city)
+		public double getWeight(string city)
 		{
 			foreach (var c in this.connection)
 			{
@@ -61,7 +61,7 @@ namespace GUI3
 			return -999;
 		}
 
-		public List<Tuple<char, double>> getConnection()
+		public List<Tuple<string, double>> getConnection()
 		{
 			/*List<char> ret = new List<char>();
 			foreach (var c in connection)

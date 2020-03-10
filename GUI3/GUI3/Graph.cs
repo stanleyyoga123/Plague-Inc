@@ -5,19 +5,19 @@ namespace GUI3
 {
     class Graph
     {
-        public Dictionary<char, City> graf;
+        public Dictionary<string, City> graf;
 
-        public Graph(char[] node, int[] population)
+        public Graph(string[] node, int[] population)
         {
             int i;
-            graf = new Dictionary<char, City>();
+            graf = new Dictionary<string, City>();
             for (i = 0; i < node.Length; i++)
             {
                 graf.Add(node[i], new City(population[i]));
             }
         }
 
-        public void BatchEdge(char[] City1, char[] City2, double[] weight)
+        public void BatchEdge(string[] City1, string[] City2, double[] weight)
         {
             for (int i = 0; i < City1.Length; i++)
             {
@@ -25,7 +25,7 @@ namespace GUI3
             }
         }
 
-        public void AddEdge(char City1, char City2, double weight)
+        public void AddEdge(string City1, string City2, double weight)
         {
             if (graf.ContainsKey(City1))
             {
@@ -35,7 +35,7 @@ namespace GUI3
 
         public void printNode()
         {
-            foreach (char c in this.graf.Keys)
+            foreach (string c in this.graf.Keys)
             {
                 Console.Write(c);
                 Console.Write(" ");
@@ -43,17 +43,17 @@ namespace GUI3
             Console.WriteLine();
         }
 
-        public void printConnection(char city)
+        public void printConnection(string city)
         {
             this.graf[city].printConnection();
         }
 
-        public List<Tuple<char, double>> getConnection(char city)
+        public List<Tuple<string, double>> getConnection(string city)
         {
             return this.graf[city].getConnection();
         }
 
-        public double getWeight(char city1, char city2)
+        public double getWeight(string city1, string city2)
         {
             return this.graf[city1].getWeight(city2);
         }
