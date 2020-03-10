@@ -18,10 +18,12 @@ namespace Tubes_2
             Graph g = new Graph(Read.getCity(), Read.getPopulation());
             g.BatchEdge(Read.getCityParent(), Read.getCityChild(), Read.getTr());
             g.printNode();
+            Console.WriteLine("CONNECTION");
+            g.printConnection("A");
 
-            BFS b = new BFS(g);
+            // BFS b = new BFS(g);
 
-            b.run(10, 'A');
+            // b.run(10, 'A');
 
         }
     }
