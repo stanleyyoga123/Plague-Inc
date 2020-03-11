@@ -62,7 +62,7 @@ namespace GUI3
 						if (ans <= T[item.Item1])
 						{
 							T[item.Item1] = ans;
-							this.pre[item.Item1] = src;
+							this.pre[item.Item1] = front;
 							q.Enqueue(item.Item1);
 						}
 					}

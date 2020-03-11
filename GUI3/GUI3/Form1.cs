@@ -98,7 +98,7 @@ namespace GUI3
                         if (i != si - 1)
                         {
                             gg += hasil[i];
-                            gg += "->";
+                            gg += " -> ";
                         }
                         else
                         {
