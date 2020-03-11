@@ -5,18 +5,26 @@ namespace GUI3
 {
 	class BFS
 	{
+		/* pre digunakan untuk menyimpan previous city yang berhasil menginfeksi city yang dipilih */
 		private Dictionary<string, string> pre;
+
+		/* g merupakan variabel Graph yg akan ditelusuri menggunakan BFS */
 		private Graph g;
+		
+		/* Konstruktor class BFS */
 		public BFS(Graph g)
 		{
 			this.g = g;
 		}
 
+		/* method utility untuk menjalankan BFS dari source -> src */
 		public Dictionary<string, int> run(int t, string src)
 		{
 			this.pre = new Dictionary<string, string>();
 			Queue<string> q = new Queue<string>();
 			Dictionary<string, int> T = new Dictionary<string, int>();
+
+			/* Inisialisasi nilai T dengan nilai yang besar, kecuali source dimana T[src] = 0 */
 			foreach (var item in this.g.graf)
 			{
 				if (item.Key == src)
@@ -29,10 +37,12 @@ namespace GUI3
 				}
 			}
 
+			/* Previous dari source adalah -1 */
 			this.pre[src] = "-1";
 
 			q.Enqueue(src);
 
+			/* Algoritma BFS */
 			while (q.Count != 0)
 			{
 				string front = q.Dequeue();
@@ -42,15 +52,9 @@ namespace GUI3
 				{
 
 					int ans = -1;
-					/*Console.WriteLine("Parent: ");
-					Console.WriteLine(front);
-					Console.WriteLine("Child: ");
-					Console.WriteLine(item.Item1);*/
 					for (int i = T[front]; i <= t; i++)
 					{
 						double cek = this.Calc(t_, i - T[front]) * item.Item2;
-						/*Console.WriteLine(i);
-						Console.WriteLine(cek);*/
 						if (cek > 1.0)
 						{
 							ans = i;
@@ -72,11 +76,13 @@ namespace GUI3
 			return T;
 		}
 
+		/* method utility untuk mengembalikan previous */
 		public Dictionary<string, string> getPre()
 		{
 			return this.pre;
 		}
 
+		/* method untuk menghitung fungsi logistik */
 		private double Calc(int pop, int time)
 		{
 			double popd = pop;

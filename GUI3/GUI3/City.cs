@@ -5,7 +5,10 @@ namespace GUI3
 {
 	public class City
 	{
+		/* menunjukkan populasi yang ada di suatu kota */
 		int population;
+
+		/* menunjukkan kota-kota mana saja yang terhubung dengan kota ini */
 		List<Tuple<string, double>> connection;
 
 		public City()
