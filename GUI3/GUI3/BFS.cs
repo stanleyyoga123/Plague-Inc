@@ -5,6 +5,7 @@ namespace GUI3
 {
 	class BFS
 	{
+		private Dictionary<string, string> pre;
 		private Graph g;
 		public BFS(Graph g)
 		{
@@ -13,6 +14,7 @@ namespace GUI3
 
 		public Dictionary<string, int> run(int t, string src)
 		{
+			this.pre = new Dictionary<string, string>();
 			Queue<string> q = new Queue<string>();
 			Dictionary<string, int> T = new Dictionary<string, int>();
 			foreach (var item in this.g.graf)
@@ -26,6 +28,8 @@ namespace GUI3
 					T.Add(item.Key, 10000);
 				}
 			}
+
+			this.pre[src] = "-1";
 
 			q.Enqueue(src);
 
@@ -58,6 +62,7 @@ namespace GUI3
 						if (ans <= T[item.Item1])
 						{
 							T[item.Item1] = ans;
+							this.pre[item.Item1] = src;
 							q.Enqueue(item.Item1);
 						}
 					}
@@ -65,6 +70,11 @@ namespace GUI3
 			}
 
 			return T;
+		}
+
+		public Dictionary<string, string> getPre()
+		{
+			return this.pre;
 		}
 
 		private double Calc(int pop, int time)

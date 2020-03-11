@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -76,20 +77,51 @@ namespace GUI3
             BFS c = new BFS(g);
 
             Dictionary<string, int> h = c.run(Convert.ToInt32(numericUpDown1.Value), Read.getFirstCity());
-            foreach(var he in h)
+            Dictionary<string, string> pre = c.getPre();
+            string rute = "";
+            foreach (var he in h)
             {
-                if(he.Value >= 0 && he.Value <= 20)
+                if (pre.ContainsKey(he.Key))
                 {
-                    this.graph.FindNode(he.Key.ToString()).Attr.FillColor = Microsoft.Msagl.Drawing.Color.Red;
-                } else
-                {
-                    this.graph.FindNode(he.Key.ToString()).Attr.FillColor = Microsoft.Msagl.Drawing.Color.White;
+                    string ptr = he.Key;
+                    ArrayList hasil = new ArrayList();
+                    while (ptr != "-1")
+                    {
+                        hasil.Add(ptr);
+                        ptr = pre[ptr];
+                    }
+                    hasil.Reverse();
+                    string gg = "";
+                    int si = hasil.Count;
+                    for (int i = 0; i < si; i++)
+                    {
+                        if (i != si - 1)
+                        {
+                            gg += hasil[i];
+                            gg += "->";
+                        }
+                        else
+                        {
+                            gg += hasil[i];
+                            gg += "\n";
+                        }
+                    }
+                    rute += gg;
+                    if (he.Value >= 0 && he.Value <= 20)
+                    {
+                        this.graph.FindNode(he.Key.ToString()).Attr.FillColor = Microsoft.Msagl.Drawing.Color.Red;
+                    }
+                    else
+                    {
+                        this.graph.FindNode(he.Key.ToString()).Attr.FillColor = Microsoft.Msagl.Drawing.Color.White;
+                    }
                 }
-            }
-            this.viewer.Graph = graph;
-            this.viewer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Controls.Add(this.viewer);
+                this.label1.Text = rute;
+                this.viewer.Graph = graph;
+                this.viewer.Dock = System.Windows.Forms.DockStyle.Fill;
+                this.panel1.Controls.Add(this.viewer);
 
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
